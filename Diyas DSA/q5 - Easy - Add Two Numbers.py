@@ -10,8 +10,7 @@ BTW this program takes 4GB of ram so if your computer has less than that then yo
 
 
 def Add_Two_Numbers(nums:list[str|int]) -> int:
-    return 0
-
+    pass
 
 
 

@@ -199,7 +199,6 @@ def Corporate_Greed(Pay:list[int],Budget:list[int]) -> int:
 
 
 
-
 def check():
     testcases = [
         [[5,6,9,2,4],[5,15,25]],

@@ -1,6 +1,7 @@
 #include <raylib.h>
-// #include "Gameplay.h"
+#include "Gameplay.h"
 #include <string>
+#include <vector>
 
 typedef enum Gamescreen {TITLE,CHOOSE,GAMEPLAY,GAMEOVER} Gamescreen;
 
@@ -11,8 +12,9 @@ int main(void) {
 	const int maxarrow = 1;
 	int arrowval = 0;
 	int positions[] = { 60,100 };
-	int vqueue[7] = {};
+	std::vector<int> vqueue = {};
 	int vpl = 0;
+	int pieceSize = 20;
 	int vpr = 2;
 	int vpmax = 2;
 	
@@ -49,8 +51,8 @@ int main(void) {
 				}
 			}
 			case (GAMEPLAY): {
-				if (IsKeyPressed(KEY_A)) {
-					Gameplayfunc(vqueue, &vpl, &vpr, &vpmax);	
+				if (IsKeyPressed(KEY_LEFT)) {
+					//Gameplayfunc(vqueue, &vpl, &vpr, &vpmax);	
 				}
 			}
 		}
@@ -71,6 +73,7 @@ int main(void) {
 				}
 				case(GAMEPLAY): {
 					DrawText("hello world", 500, 500, 32, WHITE);
+					DrawRectangle(100, 100, pieceSize, pieceSize, BLUE);
 					DrawText(TextFormat("Queue: %i", vqueue), 200, 200, 32, WHITE);
 				}
 			}
