@@ -197,18 +197,17 @@ def check():
     for i in range(len(testcases)):
         if mysolution(testcases[i]) != ValidParenthesis(testcases[i]):
             return f'''
-    Failed Testcase {i}
+    Failed Testcase {i+1}
 
     Tastcase:
-        Pay {i[0]}
-        Budget {i[1]}
+        s: {testcases[i]}
 
     Your Answer: 
-    {ValidParenthesis(i[0],i[1])}
+    {ValidParenthesis(testcases[i])}
 
     Correct Answer:
-    {mysolution(i[0],i[1])}
+    {mysolution(testcases[i])}
 '''
 
 if __name__ == "__main__":
-    pass
+    print(check())
