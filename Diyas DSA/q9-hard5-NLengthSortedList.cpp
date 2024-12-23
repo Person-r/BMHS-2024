@@ -35,9 +35,7 @@ using namespace std;
 #include <algorithm>
 
 vector<int> nthlargestnumbers(int N,int list[]) {
-    return vector<int>{1,2,3,4};
-    
-    
+    return vector<int>{1,2,3,4}; 
 }
 
 
@@ -122,21 +120,23 @@ vector<int> myanswer(int n, int list[]) {
     // int temp = sizeof(list)/sizeof(list[0]);
     // copy(list,list+temp,list2);
     for (int i = 0; i < n; i++) {
-        newlist.insert(newlist.begin(),0);
+        newlist.push_back(0);
     }
 
-    int max = sizeof(list)/sizeof(list[0]);
-    
-    for (int i = 0; i < max; i++) {
-        list2.push_back(list[i]);
+    int max = 0;
+    while (list[max] != 0) {
+        list2.push_back(list[max]);
+        max++;
     }
+
 
     int i = 0;
     int nlp = 0;
     while (i != max) {
-        if (list[0+i] > newlist.at(nlp)) {
-            list2.push_back(newlist.at(nlp));
-            newlist.at(nlp) = list[i];
+        int vnlp = newlist[nlp];
+        if (list2[0+i] > newlist[nlp]) {
+            list2.push_back(newlist[nlp]);
+            newlist[nlp] = list2[i];
             max++;
             i++;
             nlp = 0;
@@ -203,7 +203,8 @@ void check() {
         N = &x[i][0][0];
         list = &x[i][1][0]; // oh yes this works because lists are linked lists. Not mutable though
         if (myanswer(*N,list) != nthlargestnumbers(*N,list)) {
-            cout << "Failed Testcase" << i << endl;
+            cout << "Failed Testcase " << i+1 << endl;
+            return;
         }
     }
 
