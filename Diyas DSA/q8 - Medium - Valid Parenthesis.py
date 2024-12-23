@@ -14,7 +14,24 @@ Credit: Neetcode.io
 
 
 def ValidParenthesis(s:str) -> bool:
-    return bool
+    d = {
+        "[":"]",
+        "{":"}",
+        "(":")"
+    }
+    stack = []
+    for i in s:
+        if i in d.keys():
+            stack.append(i)
+        else:
+            try:
+                if d[stack[-1]] == d[i]:
+                    stack.pop()
+                else:
+                    return False
+            except:
+                return False
+    return len(stack) == 0
 
 
 

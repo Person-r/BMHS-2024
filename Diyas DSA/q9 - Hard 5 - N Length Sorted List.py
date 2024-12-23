@@ -1,5 +1,5 @@
 '''
-You are given one larger list of numbers. you must return a sorted list of the Nth largest numbers
+You are given one larger list of presents to give out. you must return a sorted list of the Nth largest presents so you can give them out first.
 It does not matter if the solution is sorted least to greatest or greatest to least.
 
 
