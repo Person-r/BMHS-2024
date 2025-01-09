@@ -2,8 +2,9 @@
 #include "Gameplay.h"
 #include <string>
 #include <vector>
-
+#include "main.h"
 typedef enum Gamescreen {TITLE,CHOOSE,GAMEPLAY,GAMEOVER} Gamescreen;
+
 
 int main(void) {
 
@@ -14,7 +15,7 @@ int main(void) {
 	int positions[] = { 60,100 };
 	std::vector<int> vqueue = {};
 	int vpl = 0;
-	int pieceSize = 20;
+	int pieceSize = 50;
 	int vpr = 2;
 	int vpmax = 2;
 	
@@ -72,9 +73,10 @@ int main(void) {
 					DrawText(TextFormat("%02i", arrowval), 500, 500, 32, WHITE);
 				}
 				case(GAMEPLAY): {
-					DrawText("hello world", 500, 500, 32, WHITE);
-					DrawRectangle(100, 100, pieceSize, pieceSize, BLUE);
+					/*DrawText("hello world", 500, 500, 32, WHITE);
 					DrawText(TextFormat("Queue: %i", vqueue), 200, 200, 32, WHITE);
+				*/
+					Makegrid(pieceSize);
 				}
 			}
 			DrawText("Made By The 2024-2025 BMHS Coding Club", GetScreenWidth() - 700, GetScreenHeight() - 50, 32, WHITE);
