@@ -403,7 +403,7 @@ def CreateLLfromTree(List):
 
 def myanswer(head:TreeNode):
     shead = head
-    while head.next:
+    while head.next.value != None:
         head = head.next
     head.next = shead
     return shead
