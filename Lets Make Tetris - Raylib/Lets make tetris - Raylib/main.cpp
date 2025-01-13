@@ -13,11 +13,17 @@ int main(void) {
 	const int maxarrow = 1;
 	int arrowval = 0;
 	int positions[] = { 60,100 };
-	std::vector<int> vqueue = {};
-	int vpl = 0;
-	int pieceSize = 50;
 	int vpr = 2;
 	int vpmax = 2;
+	int vpl = 0;
+	int pieceSize = 50;
+	std::vector<int> vqueue = {};
+	Board board;
+	Piece piece;
+	piece.piecesize = pieceSize;
+	piece.tetromino = 1;
+	piece.x = board.rBound / 2;
+	piece.y = board.uBound;
 	
 	Gamescreen currentscreen = TITLE;
 
@@ -77,6 +83,7 @@ int main(void) {
 					DrawText(TextFormat("Queue: %i", vqueue), 200, 200, 32, WHITE);
 				*/
 					Makegrid(pieceSize);
+					Makepiece(piece);
 				}
 			}
 			DrawText("Made By The 2024-2025 BMHS Coding Club", GetScreenWidth() - 700, GetScreenHeight() - 50, 32, WHITE);
