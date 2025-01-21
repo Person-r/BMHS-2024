@@ -1,20 +1,5 @@
-﻿  Gameplay.cpp
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(101,72): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(101,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(102,29): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(109,2): error C2664: 'void DrawText(const char *,int,int,int,Color)': cannot convert argument 1 from 'const char' to 'const char *'
-      C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(109,11):
-      Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
-      C:\Users\diyaj\Downloads\raylib-5.0_win64_msvc16\include\raylib.h(1436,12):
-      see declaration of 'DrawText'
-      C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(109,2):
-      while trying to match the argument list '(const char, int, int, int, Color)'
-  
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(110,2): error C2664: 'void DrawText(const char *,int,int,int,Color)': cannot convert argument 1 from 'const char' to 'const char *'
-      C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(110,11):
-      Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
-      C:\Users\diyaj\Downloads\raylib-5.0_win64_msvc16\include\raylib.h(1436,12):
-      see declaration of 'DrawText'
-      C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\Gameplay.cpp(110,2):
-      while trying to match the argument list '(const char, int, int, int, Color)'
-  
+﻿  main.cpp
+C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(33,22): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(125,29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(48,7): warning C4101: 'fastForward': unreferenced local variable
+  Lets make tetris - Raylib.vcxproj -> C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\x64\Debug\Lets make tetris - Raylib.exe
