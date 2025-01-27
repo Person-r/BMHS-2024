@@ -1,5 +1,5 @@
 ﻿  main.cpp
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(33,22): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(125,29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(48,7): warning C4101: 'fastForward': unreferenced local variable
+C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\main.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   Lets make tetris - Raylib.vcxproj -> C:\Users\diyaj\Downloads\Recommend me stuff\New folder\BMHS-2024\Lets Make Tetris - Raylib\Lets make tetris - Raylib\x64\Debug\Lets make tetris - Raylib.exe

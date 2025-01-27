@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="oldmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Gameplay.cpp">
@@ -24,15 +24,21 @@
     <ClCompile Include="Timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gameplay.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
+    <ClInclude Include="oldmain.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Timer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
