@@ -1,6 +1,7 @@
 #include "raylib.h";
 #include "main.h";
 #include "timer.h";
+#include "Gameplay.h"
 
 typedef enum Gamescreen { TITLE, CHOOSE, GAMEPLAY, GAMEOVER } Gamescreen;
 enum Lastheld { LEFT, RIGHT, DOWN, NONE };
@@ -17,6 +18,15 @@ int main(void) {
 
 	Piece piece;
 	piece.pieceSize = 50;
+
+	Board board;
+	board.lBound = piece.pieceSize;
+	board.rBound = piece.pieceSize * 12;
+	board.bBound = piece.pieceSize * 22;
+	board.uBound = piece.pieceSize;
+
+	piece.x = board.rBound / 2;
+	piece.y = piece.pieceSize;
 
 	InitWindow(screenWidth, screenHeight, "Tetris - BMHS");
 	ToggleFullscreen();
@@ -62,6 +72,11 @@ int main(void) {
 			DrawText("40L", 20, 100, 32, WHITE);
 			DrawText("<", 300, positions[arrowval], 32, WHITE); break;
 			//DrawText(TextFormat("%02i", arrowval), 500, 500, 32, WHITE); break;
+		}
+		case(GAMEPLAY): {
+			Makegrid(piece.pieceSize);
+			allocatePieces(piece);
+			makePiece(piece);
 		}
 		}
 		DrawText("Made By The 2024-2025 BMHS Coding Club", GetScreenWidth() - 700, GetScreenHeight() - 50, 32, WHITE);
