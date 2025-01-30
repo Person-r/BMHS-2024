@@ -32,12 +32,11 @@ class Node:
         self.right = None
         self.left = None
         self.gold = False
-        self.nick = randint(0,99999) 
+        self.nick = randint(0,9999) 
 
 
 def YARRRGHH11111(head:Node) -> Node|int:
-    pass
-
+    return 2
 
 
 
@@ -310,6 +309,7 @@ def createGraphfrom2Darray(Array:list,goldposition:list) -> Node:
             checklist[z].append(Array[z][f].nick)
     # for i in checklist:
     #     print(i)
+    # print("\n")
     return Array[0][0]
 
 def isNode(check) -> bool:
@@ -319,10 +319,11 @@ def isNode(check) -> bool:
     except:
         return False
 
-def myown(head:Node) -> list[Node,int]:
+def myown(newhead:Node) -> list[Node,int]:
+    head = newhead
     visited = [None]
     queue = [head]
-    while len(queue) != 0:
+    while True:
         head = queue.pop(0)
         if head.gold == True:
             return [head,head.nick]
@@ -336,7 +337,9 @@ def myown(head:Node) -> list[Node,int]:
                 queue.append(head.left)
             if head.up not in visited:
                 queue.append(head.up)
-
+        if len(queue) == 0:
+            break
+    return "ERR"
 
         
 
@@ -346,69 +349,32 @@ def myown(head:Node) -> list[Node,int]:
 def check():
     qs = [
         createGraphfrom2Darray(
-            [[
+            [
                 [0]
-            ]],[0,0]
-        ),
-        createGraphfrom2Darray(
-            [[
-                [1,2,3,4],
-                [3,4,5,6],
-                [9,2,4,6]
-            ]],[1,1]
-        ),
-        createGraphfrom2Darray(
-            [[
-                [0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0],
-                [0,0,0,0,0,0,0,0]
-            ]],[3,4] #you know this is my height as well cause im 6'5 I mean 6'4 femenist and also Chris brown listener
-        ),
-        createGraphfrom2Darray(
-            [[
-                [0,0,0],
-                [0,0,0],
-                [0,0,0]
-            ]],[1,1]
+            ],[0,0]
         ),
         createGraphfrom2Darray(
             [
-            [1, 2, 3, 4],
-            [5, 6, 7, 8],
-            [9, 10, 11, 12],
-            [13, 14, 15, 16]
-            ],[3,3]
-        )]
-    myqsbecauseimlazyanddonotwanttocopyall = [
-        createGraphfrom2Darray(
-            [[
-                [0]
-            ]],[0,0]
-        ),
-        createGraphfrom2Darray(
-            [[
                 [1,2,3,4],
                 [3,4,5,6],
                 [9,2,4,6]
-            ]],[1,1]
+            ],[1,1]
         ),
         createGraphfrom2Darray(
-            [[
+            [
                 [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0]
-            ]],[3,4] #you know this is my height as well cause im 6'5 I mean 6'4 femenist and also Chris brown listener
+            ],[3,4] #you know this is my height as well cause im 6'5 I mean 6'4 femenist and also Chris brown listener
         ),
         createGraphfrom2Darray(
-            [[
+            [
                 [0,0,0],
                 [0,0,0],
                 [0,0,0]
-            ]],[1,1]
+            ],[1,1]
         ),
         createGraphfrom2Darray(
             [
@@ -419,9 +385,9 @@ def check():
             ],[3,3]
         )]
     for i in range(len(qs)):
-        x = myown(myqsbecauseimlazyanddonotwanttocopyall[i])
+        x = myown(qs[i])
         y = YARRRGHH11111(qs[i])
-        if x != y:
+        if y not in x:
             return f'''
 Failed testcase {i+1}
 

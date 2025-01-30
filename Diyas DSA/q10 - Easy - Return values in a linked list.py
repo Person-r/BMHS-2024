@@ -26,12 +26,12 @@ class TreeNode:
         self.next = next
 
 def Returnlinkedlist(head:TreeNode) -> list[int]:
-    pass
+    pass 
 
 
 
 
-#djirkta
+#
 
 
 
