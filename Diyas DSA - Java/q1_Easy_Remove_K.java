@@ -27,6 +27,9 @@ public class q1_Easy_Remove_K {
     private String removeKelement(String testString, String k) {
         return "";
     }   
+    void main() {
+        System.out.println(check());
+    }
 
 
 
@@ -147,7 +150,7 @@ public class q1_Easy_Remove_K {
 
         for (int i = 0; i < testcases.length; i++) {
             if (!mySolution(testcases[i][0],testcases[i][1]).equals(removeKelement(testcases[i][0], testcases[i][1]))) {
-                String string = "failed testcase " + i;
+                String string = "failed testcase " + (i + 1);
                 return string;
             }
         }
@@ -157,8 +160,5 @@ public class q1_Easy_Remove_K {
 
 
 
-    void main() {
-        System.out.println(check());
-    }
-
+    
 }
