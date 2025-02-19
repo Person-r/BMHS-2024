@@ -26,9 +26,16 @@ Testlist only contains lowercase letters
 '''
 # btw as a general note DO NOT rename the function given to you in the question.
 def RemoveKelement(TestString:str,k:str) -> str:
+    # teststring i hate java
+    # k A
+    # I hat java
+    # i hte jv for i range (5) // for i in range (whatever the length of teststring is)
     # Put your solution here 
-    pass
-
+    for i in range (len(TestString)):
+        if k == TestString[i]:
+            TestString[i] == "" 
+    return TestString
+    
 
 
 
